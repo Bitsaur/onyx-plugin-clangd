@@ -1,0 +1,38 @@
+{
+  "id": "Clangd",
+  "name": "Clangd",
+  "publisher": "Bitsaur",
+  "description": "Add LSP for C/C++ using Clangd",
+  "author": "Bitsaur",
+  "version": "1.0.0",
+  "type": "python",
+  "activate_on": [ "OnLanguage@cpp", "OnLanguage@c" ],
+  "event_subscriptions": [ "SettingChanged" ],
+  "definitions":
+  {
+    "settings":
+    [
+      {
+        "id": "Process",
+        "name": "Clangd Process Path",
+        "type": "String",
+        "default": "clangd",
+        "description": "Defines the path to clangd process"
+      },
+      {
+        "id": "HeaderInsertionDecorators",
+        "name": "Header Insertion Decorators",
+        "type": "Bool",
+        "default": false,
+        "description": "Prepend a circular dot or space before the completion label, depending on whether an include line will be inserted or not"
+      },
+      {
+        "id": "HeaderInsertion",
+        "name": "Header Insertion",
+        "type": "Bool",
+        "default": false,
+        "description": "Add #include directives when accepting code completions"
+      }
+    ]
+  }
+}
